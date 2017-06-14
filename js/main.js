@@ -12,6 +12,7 @@ var Kamihubuki = (function() {
   ctx,
   stageWidth,
   stageHeight,
+  marginBottom   = 10, // スクロールが発生しないように縦幅を少し縮める
   kamikire_array = [],
   resizeFlg      = true;
 
@@ -24,7 +25,7 @@ var Kamihubuki = (function() {
 
     // ウィンドウサイズ設定
     stageWidth = window.innerWidth ? window.innerWidth : document.documentElement.clientWidth;
-    stageHeight = window.innerHeight ? window.innerHeight : document.documentElement.clientHeight;
+    stageHeight = (window.innerHeight ? window.innerHeight : document.documentElement.clientHeight)  - marginBottom;
 
     // ウィンドウサイズをキャンパスサイズに変更
     cvs.width = stageWidth;
@@ -205,7 +206,7 @@ var Kamihubuki = (function() {
   window.addEventListener('resize', function() {
     resizeFlg = true;
     stageWidth = window.innerWidth ? window.innerWidth : document.documentElement.clientWidth;
-    stageHeight = window.innerHeight ? window.innerHeight : document.documentElement.clientHeight;
+    stageHeight = (window.innerHeight ? window.innerHeight : document.documentElement.clientHeight)  - marginBottom;
   });
 
   return {
