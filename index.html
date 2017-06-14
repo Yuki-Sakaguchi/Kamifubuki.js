@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Kamihubuki.js</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--[if lt IE 9]>
+  <script src="//cdn.jsdelivr.net/html5shiv/3.7.2/html5shiv.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+  <style>
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: #161733;
+  }
+  h1 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    display: inline-block;
+    width: 300px;
+    height: 50px;
+    text-align: center;
+    font-weight: bold;
+    color: white;
+  }
+  </style>
+</head>
+<body>
+  <h1>Kamihubuki.js</h1>
+  <canvas id="canvas"></canvas>
+  <script src="./js/main.js"></script>
+  <script>
+  Kamihubuki.options.viewCount = 500; // 表示する紙の数
+  Kamihubuki.options.randomColor = false; // 紙の色をランダムにするかフラグ
+  Kamihubuki.options.fill = 'white'; // 表示する紙の色
+  Kamihubuki.run();
+  </script>
+</body>
+</html>
