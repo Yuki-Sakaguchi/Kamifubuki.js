@@ -1,9 +1,11 @@
 var Kamihubuki = (function() {
   // public variable
   var options = {
+    canvasId   : "kamihubuki-canvas",
     viewCount  : 500,
     randomColor: false,
-    fill       : "yellow"
+    fill       : "yellow",
+    zIndex     : 1000
   }
 
   // private variable
@@ -21,11 +23,16 @@ var Kamihubuki = (function() {
    */
   function init() {
     // キャンパスを取得
-    cvs = document.getElementById("canvas");
+    cvs = document.getElementById(options.canvasId);
+
+    if (!cvs) {
+      // 指定のcanvasがなければbody直下に生成する
+      createCanvas();
+    }
 
     // ウィンドウサイズ設定
     stageWidth = window.innerWidth ? window.innerWidth : document.documentElement.clientWidth;
-    stageHeight = (window.innerHeight ? window.innerHeight : document.documentElement.clientHeight)  - marginBottom;
+    stageHeight = (window.innerHeight ? window.innerHeight : document.documentElement.clientHeight) - marginBottom;
 
     // ウィンドウサイズをキャンパスサイズに変更
     cvs.width = stageWidth;
@@ -55,6 +62,16 @@ var Kamihubuki = (function() {
 
     // 描画を0.03秒ごとに行う
     setInterval(enterFrame, 30);
+  }
+
+  function createCanvas() {
+    cvs = document.createElement('canvas');
+    cvs.className = options.canvasId;
+    cvs.style.position = 'absolute';
+    cvs.style.top = 0;
+    cvs.style.left = 0;
+    cvs.style.zIndex = options.zIndex;
+    document.getElementsByTagName('body')[0].append(cvs);
   }
 
   /**

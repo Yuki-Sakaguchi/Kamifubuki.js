@@ -5,41 +5,71 @@
   <title>Kamihubuki.js</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!--[if lt IE 9]>
-  <script src="//cdn.jsdelivr.net/html5shiv/3.7.2/html5shiv.min.js"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
-  <![endif]-->
+</head>
+<body>
+  <div class="container">
+    <h1>Kamihubuki.js</h1>
+    <div class="code">
+      <h2>Kamihubuki.jsを読み込む</h2>
+      <pre><code>
+        &lt;script src="./js/Kamihubuki.js"&gt;&lt;/script&gt;
+      </code></pre>
+    </div>
+    <div class="code">
+      <h2>好きなオプションを設定し、run()で実行</h2>
+      <pre><code>
+        Kamihubuki.options.viewCount = 500; // 表示する紙の数
+        Kamihubuki.options.fill = 'white'; // 表示する紙の色
+        Kamihubuki.run();
+      </code></pre>
+    </div>
+  </div>
+
+  <!-- 実例 -->
+  <script src="./js/Kamihubuki.js"></script>
+  <script>
+  Kamihubuki.options.viewCount = 500; // 表示する紙の数
+  Kamihubuki.options.fill = 'white'; // 表示する紙の色
+  Kamihubuki.run();
+  </script>
+
+  <!-- 関係ないスタイルたち -->
   <style>
-  html, body {
+  html, body, pre {
     margin: 0;
     padding: 0;
+  }
+  html, body {
     background: #161733;
   }
-  h1 {
+  .container {
+    width: 500px;
+    height: 500px;
     position: absolute;
     top: 0;
     right: 0;
-    bottom: 0;
     left: 0;
+    bottom: 0;
     margin: auto;
-    display: inline-block;
-    width: 300px;
-    height: 50px;
+  }
+  h1 {
     text-align: center;
     font-weight: bold;
     color: white;
   }
+  h2 {
+    margin: 0 12px 0;
+    padding: 10px 10px 10px;
+    border-bottom: 1px solid;
+  }
+  .code {
+    margin-bottom: 20px;
+    color: #161733;
+    background: white;
+    position: relative;
+    border-radius: 10px;
+    z-index: 9999;
+  }
   </style>
-</head>
-<body>
-  <h1>Kamihubuki.js</h1>
-  <canvas id="canvas"></canvas>
-  <script src="./js/Kamihubuki.js"></script>
-  <script>
-  Kamihubuki.options.viewCount = 500; // 表示する紙の数
-  Kamihubuki.options.randomColor = false; // 紙の色をランダムにするかフラグ
-  Kamihubuki.options.fill = 'white'; // 表示する紙の色
-  Kamihubuki.run();
-  </script>
 </body>
 </html>
