@@ -38,6 +38,8 @@ var Kamihubuki = (function() {
     cvs.width = stageWidth;
     cvs.height = stageHeight;
 
+    csv.style.zIndex = options.zIndex;
+
     // キャンパス全面に四角を描画
     ctx = cvs.getContext("2d");
     ctx.fillStyle = "#FFF";
@@ -70,7 +72,6 @@ var Kamihubuki = (function() {
     cvs.style.position = 'absolute';
     cvs.style.top = 0;
     cvs.style.left = 0;
-    cvs.style.zIndex = options.zIndex;
     document.getElementsByTagName('body')[0].append(cvs);
   }
 

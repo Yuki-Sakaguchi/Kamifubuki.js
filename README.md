@@ -42,3 +42,8 @@ Kamihubuki.options.randomColor = true; // デフォルトはfalse
 ~~~~
 Kamihubuki.options.fill = "#000"; // デフォルトはyellow
 ~~~~
+
+・z-indexの設定
+~~~~
+Kamihubuki.options.zIndex = 100; // デフォルトは1000
+~~~~
