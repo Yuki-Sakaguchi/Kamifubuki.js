@@ -25,7 +25,7 @@ var Kamihubuki = (function() {
     // キャンパスを取得
     cvs = document.getElementById(options.canvasId);
 
-    if (!cvs) {
+    if (!cvs || cvs.tagName !== 'canvas') {
       // 指定のcanvasがなければbody直下に生成する
       createCanvas();
     }

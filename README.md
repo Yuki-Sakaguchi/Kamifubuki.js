@@ -23,6 +23,11 @@ https://yuki-sakaguchi.github.io/Kamihubuki.js/
 
 
 ## オプション
+・紙吹雪を描画するcanvasを指定する（canvasIdに設定されたidを持つcanvasが存在しなかった場合、body直下に自動で追加される）
+~~~~
+Kamihubuki.options.canvasId = 'canvas'; // デフォルトは'kamihubuki-canvas'
+~~~~
+
 ・canvasに表示する紙吹雪の数を設定
 ~~~~
 Kamihubuki.options.viewCount = 1000; // デフォルトは500
