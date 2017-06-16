@@ -1,9 +1,9 @@
 var Kamihubuki = (function() {
   // public variable
   var options = {
-    viewCount  : 300,
-    randomColor: true,
-    fill       : "#f00"
+    viewCount  : 500,
+    randomColor: false,
+    fill       : "yellow"
   }
 
   // private variable
@@ -143,7 +143,7 @@ var Kamihubuki = (function() {
       ctx.lineTo(this.x+_Fx*this.SIZE/2-_Gx*this.SIZE/2, this.y+_Fy*this.SIZE/2-_Gy*this.SIZE/2);
       ctx.lineTo(this.x+_Fx*this.SIZE/2+_Gx*this.SIZE/2, this.y+_Fy*this.SIZE/2+_Gy*this.SIZE/2);
       ctx.closePath();
-      
+
       ctx.fill();
     },
 
