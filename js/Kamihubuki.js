@@ -1,4 +1,5 @@
 var Kamihubuki = (function() {
+  
   // public variable
   var options = {
     canvasId   : "kamihubuki-canvas",
@@ -38,7 +39,7 @@ var Kamihubuki = (function() {
     cvs.width = stageWidth;
     cvs.height = stageHeight;
 
-    csv.style.zIndex = options.zIndex;
+    cvs.style.zIndex = options.zIndex;
 
     // キャンパス全面に四角を描画
     ctx = cvs.getContext("2d");
