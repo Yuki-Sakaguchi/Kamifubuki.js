@@ -39,7 +39,7 @@ var Kamihubuki = (function() {
     // 紙吹雪生成
     for (var i = 0; i < options.viewCount; i++) {
       // 紙インスタンスを生成
-      var kami = new Kamikire(2+Math.floor(Math.random()*5));
+      var kami = new Kamikire(2+Math.floor(Math.random()*10));
 
       // 位置をランダムで決定
       kami.x = Math.random()*stageWidth;
@@ -143,6 +143,7 @@ var Kamihubuki = (function() {
       ctx.lineTo(this.x+_Fx*this.SIZE/2-_Gx*this.SIZE/2, this.y+_Fy*this.SIZE/2-_Gy*this.SIZE/2);
       ctx.lineTo(this.x+_Fx*this.SIZE/2+_Gx*this.SIZE/2, this.y+_Fy*this.SIZE/2+_Gy*this.SIZE/2);
       ctx.closePath();
+      
       ctx.fill();
     },
 
